@@ -40,4 +40,4 @@ async def _bot(ctx):
 
 
 
-bot.run("TOKEN RAHASIA ADA DI SINI")
+bot.run(token)
