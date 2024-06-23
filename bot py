@@ -23,21 +23,11 @@ async def hello(ctx):
 async def heh(ctx, count_heh = 5):
     await ctx.send("he" * count_heh)
 
-@bot.group()
-async def cool(ctx):
-    """Says if a user is cool.
-
-    In reality this just checks if a subcommand is being invoked.
-    """
-    if ctx.invoked_subcommand is None:
-        await ctx.send(f'No, {ctx.subcommand_passed} is not cool')
-
-
-@cool.command(name='bot')
-async def _bot(ctx):
-    """Is the bot cool?"""
-    await ctx.send('Yes, the bot is cool.')
-
+@bot.command(name='bot')
+async def _bot(ctx,nama): 
+    if nama == 'lingkungan_rumah' :
+        await ctx.send(
+            '1. Membuang sampah pada tempatnya. .2.Hal pertama yang harus dilakukan adalah membiasakan diri membuang sampah di tempat sampah.3.Memisahkan sampah organic.')
 
 
 bot.run(token)
